@@ -1,120 +1,99 @@
-/* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #000047;
-    color: #ffffff;
-    font-size: 1.2rem; /* Aumentar el tamaño de la letra */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 .container {
     width: 80%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: left; /* Alinear el texto a la izquierda */
+    margin: auto;
+    overflow: hidden;
 }
 
-/* Header */
 header {
-    background-color: #000000;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #77aaff 3px solid;
 }
 
 header h1 {
-    font-size: 3rem; /* Aumentar el tamaño de la letra */
-    margin-bottom: 10px;
+    text-align: center;
+    margin: 0;
+    font-size: 2.5em;
 }
 
 header p {
-    font-size: 1.3rem; /* Aumentar el tamaño de la letra */
+    text-align: center;
+    margin: 0;
+    font-size: 1.2em;
 }
 
-/* Section styles */
+.photo img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+section {
+    padding: 20px 0;
+}
+
 h2 {
-    font-size: 2rem; /* Aumentar el tamaño de la letra */
-    margin-top: 30px;
-    color: #ffffff;
-}
-h3{
-    color: #f30f0f;
-    font-size: 1.8rem; /* Aumentar el tamaño de la letra */
+    text-align: center;
+    color: #333;
 }
 
-ul {
-    list-style-type: none;
-    margin-left: 0;
-    padding-left: 20px;
+.skills ul, .experience ul {
+    list-style: none;
+    padding: 0;
 }
 
-ul li {
-    margin-bottom: 5px;
+.skills li, .experience li {
+    background: #77aaff;
+    color: #fff;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .job {
-    margin-bottom: 20px;
+    background: #ffffff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .job h3 {
-    font-size: 1.8rem; /* Aumentar el tamaño de la letra */
-    margin-bottom: 5px;
+    margin-top: 0;
 }
 
-.job p {
-    font-size: 1.2rem; /* Aumentar el tamaño de la letra */
-    margin-bottom: 10px;
+.juego1 img {
+    width: 400px; /* Adjust the width as needed */
+    height: auto;
+    border-radius: 5px;
 }
 
-/* Game Section */
-.game {
-    text-align: center;
-    margin-top: 40px;
-}
-
-canvas {
-    border: 1px solid #000;
-    background-color: black;
-}
-
-/* Footer */
 footer {
-    background-color: #333;
-    color: rgb(255, 255, 255);
+    background: #333;
+    color: #fff;
     text-align: center;
-    padding: 15px 0;
-    margin-top: 50px;
+    padding: 10px 0;
+    margin-top: 20px;
 }
 
 footer a {
-    color: #ffeb3b;
+    color: #77aaff;
     text-decoration: none;
 }
 
 footer a:hover {
     text-decoration: underline;
-}
-.photo {
-    text-align: left; /* Alinear la foto a la izquierda */
-    margin: 0px 0;
-}
-
-.photo img {
-    max-width: 50%; /* Aumentar el tamaño de la foto */
-    height: auto;
-    border-radius: 10px;
-}
-.juego1 img {
-    max-width: 50%; /* Aumentar el tamaño de la foto */
-    height: auto;
-    border-radius: 10px;
-}
-.juego1 img:hover {
-    transform: scale(1.05);
 }
