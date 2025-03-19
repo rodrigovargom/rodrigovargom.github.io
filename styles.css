@@ -85,15 +85,91 @@ footer {
     background: #333;
     color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px 0;
     margin-top: 20px;
 }
 
-footer a {
-    color: #77aaff;
-    text-decoration: none;
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+    color: #fff;
 }
 
-footer a:hover {
-    text-decoration: underline;
+footer a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-icon {
+    width: 62px; /* Adjust the size of the icons */
+    height: auto;
+    vertical-align: middle;
+    transition: transform 0.3s ease;
+}
+
+.footer-icon:hover {
+    transform: scale(1.2); /* Slight zoom effect on hover */
+}
+.arrow {
+    float: right;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.dropdown-content p {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+.experience li {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+    background: #77aaff;
+    color: #fff;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.experience li:hover {
+    background: #5599dd;
+}
+.dropdown-content {
+    display: none;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Centra el contenido dentro del contenedor */
+}
+
+.dropdown-content img {
+    width: 100%; /* Valor por defecto para otras imágenes */
+    height: auto;
+    border-radius: 5px;
+}
+
+.dropdown-content img[alt="movimiento1"],
+.dropdown-content img[alt="movimiento2"] {
+    width: 40%; /* Ajusta el tamaño al 40% del contenedor */
+    height: auto;
+    display: inline-block; /* Asegura que las imágenes se comporten como elementos en línea */
+    margin: 5px; /* Espaciado uniforme entre las imágenes */
 }

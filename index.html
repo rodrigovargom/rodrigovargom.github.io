@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rodrigo Vargas Gomez Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+   
 </head>
 <body>
     <header>
@@ -16,13 +18,14 @@
             <div class="photo">
                 <img src="Imagenes/FOTO PERFIL.jpg" alt="Foto de Rodrigo Vargas Gómez">
             </div>
+           
+          
         </div>
     </header>
 
     <section class="container">
         <section class="bio">
-            <h2>About Me</h2>
-            <p>Brief introduction about yourself.</p>
+           
         </section>
 
         <section class="skills">
@@ -36,11 +39,11 @@
 
         <section class="experience">
             <h2>Proyectos</h2>
-            <div class="job">
+            <div class="job" id="metal-y-plomo">
                 <h3>Metal y plomo</h3>
                 <p><strong>Llama larga</strong> 2022-2023</p>
+                <p2><strong>Funciones en el proyecto:</strong> </p2>
                 <ul>
-                    <li>Funciones en el proyecto:</li>
                     <li>-Programación de los enemigos</li>
                     <li>-Movimiento</li>
                     <li>-Implementar animaciones</li>
@@ -51,13 +54,32 @@
                     </a>
                 </div>
             </div>
-            <div class="job">
+            <div class="job" id="vanaras-chamber">
                 <h3>Vanara´s Chamber</h3>
                 <p><strong>Slide studios</strong> 2024-2025</p>
+                <p2><strong>Funciones en el proyecto:</strong> </p2>
                 <ul>
-                    <li>-Movimiento de las estatuas</li>
-                    <li>-Final del juego</li>
-                    <li>-Productor</li>
+                    <li> -Movimiento de las estatuas 
+                        <span class="arrow">&#9660;</span>
+                        <div class="dropdown-content">
+                            <img src="Imagenes/gf.PNG" alt="movimiento1">
+                            <img src="Imagenes/tre.PNG" alt="movimiento2">
+                            <p>Solo se mueven si no se estan moviendo osi no se ha pasado el nivel.</p>
+                        </div></li>
+                    <li>-Final del juego
+                        <span class="arrow">&#9660;</span>
+                        <div class="dropdown-content">
+                            <img src="Imagenes/dg.PNG" alt="final">
+                           
+                        </div>
+                    </li>
+                    <li>-Productor
+                        <span class="arrow">&#9660;</span>
+                        <div class="dropdown-content">
+                            <img src="Imagenes/producer.PNG" alt="Programación de los enemigos">
+                            <p>Este es el backlog  del proyecto.</p>
+                        </div>
+                    </li>
                 </ul>
                 <div class="juego1">
                     <a href="https://slidestudios.itch.io/vanaras-chamber" target="_blank">
@@ -69,7 +91,13 @@
     </section>
 
     <footer>
-        <p>Find me on: <a href="https://itch.io/profile/rodrigovargom" target="_blank">Itchio</a> | <a href="https://www.linkedin.com/in/rodrigo-vargas-gomez/" target="_blank">Linkedin</a></p>
+        <p>Find me on:</p>
+        <a href="https://itch.io/profile/rodrigovargom" target="_blank">
+            <img src="Imagenes/itchio-textless-black.svg" alt="Itch.io" class="footer-icon">
+        </a>
+        <a href="https://www.linkedin.com/in/rodrigo-vargas-gomez/" target="_blank">
+            <img src="Imagenes/LinkedIn_logo_initials.png.webp" alt="LinkedIn" class="footer-icon">
+        </a>
     </footer>
 </body>
 </html>
