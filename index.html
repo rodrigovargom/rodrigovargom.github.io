@@ -4,100 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rodrigo Vargas Gomez Portfolio</title>
+    <title>Rodrigo Vargas Gómez | Portfolio</title>
+    <meta name="description" content="Portfolio profesional de Rodrigo Vargas Gómez, programador de videojuegos y productor.">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-   
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Rodrigo Vargas Gómez</h1>
-            <p>Programador</p>
-            <p>Email: rodrigovargom@gmail.com | Teléfono: 722782847</p>
+    <header class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <p class="eyebrow">Portfolio profesional</p>
+                <h1>Rodrigo Vargas Gómez</h1>
+                <p class="role">Programador de videojuegos</p>
+                <p class="contact">rodrigovargom@gmail.com · +34 722 782 847</p>
+                <div class="hero-links">
+                    <a href="https://www.linkedin.com/in/rodrigo-vargas-gomez/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://itch.io/profile/rodrigovargom" target="_blank" rel="noopener noreferrer">Itch.io</a>
+                </div>
+            </div>
             <div class="photo">
                 <img src="Imagenes/FOTO PERFIL.jpg" alt="Foto de Rodrigo Vargas Gómez">
             </div>
-           
-          
         </div>
     </header>
 
-    <section class="container">
-        <section class="bio">
-           
-        </section>
-
-        <section class="skills">
-            <h2>Skills</h2>
+    <main class="container main-grid">
+        <section class="card skills">
+            <h2>Competencias</h2>
             <ul>
-                <li>Lenguajes de programación: C#, C++, JavaScript</li>
-                <li>Motores: Unity, Construct, Unreal</li>
-                <li>Project Management, Communication</li>
+                <li><strong>Lenguajes:</strong> C#, C++, JavaScript</li>
+                <li><strong>Motores:</strong> Unity, Construct, Unreal Engine</li>
+                <li><strong>Gestión:</strong> Project Management, comunicación de equipo</li>
             </ul>
         </section>
 
-        <section class="experience">
-            <h2>Proyectos</h2>
-            <div class="job" id="metal-y-plomo">
-                <h3>Metal y plomo</h3>
-                <p><strong>Llama larga</strong> 2022-2023</p>
-                <p2><strong>Funciones en el proyecto:</strong> </p2>
+        <section class="card experience">
+            <h2>Proyectos destacados</h2>
+
+            <article class="job" id="metal-y-plomo">
+                <div class="job-header">
+                    <div>
+                        <h3>Metal y Plomo</h3>
+                        <p><strong>Llama Larga</strong> · 2022–2023</p>
+                    </div>
+                    <a class="project-link" href="https://llama-larga.itch.io/metal-y-plomo" target="_blank" rel="noopener noreferrer">Ver proyecto ↗</a>
+                </div>
+                <p class="job-subtitle">Funciones en el proyecto:</p>
                 <ul>
-                    <li>-Programación de los enemigos</li>
-                    <li>-Movimiento</li>
-                    <li>-Implementar animaciones</li>
+                    <li>Programación de enemigos</li>
+                    <li>Sistema de movimiento</li>
+                    <li>Implementación de animaciones</li>
                 </ul>
                 <div class="juego1">
-                    <a href="https://llama-larga.itch.io/metal-y-plomo" target="_blank">
-                        <img src="Imagenes/+1erhd.jpg" alt="Metal y plomo">
-                    </a>
+                    <img src="Imagenes/+1erhd.jpg" alt="Captura de Metal y Plomo">
                 </div>
-            </div>
-            <div class="job" id="vanaras-chamber">
-                <h3>Vanara´s Chamber</h3>
-                <p><strong>Slide studios</strong> 2024-2025</p>
-                <p2><strong>Funciones en el proyecto:</strong> </p2>
-                <ul>
-                    <li> -Movimiento de las estatuas 
-                        <span class="arrow">&#9660;</span>
-                        <div class="dropdown-content">
-                            <img src="Imagenes/gf.PNG" alt="movimiento1">
-                            <img src="Imagenes/tre.PNG" alt="movimiento2">
-                            <p>Solo se mueven si no se estan moviendo osi no se ha pasado el nivel.</p>
-                        </div></li>
-                    <li>-Final del juego
-                        <span class="arrow">&#9660;</span>
-                        <div class="dropdown-content">
-                            <img src="Imagenes/dg.PNG" alt="final">
-                           
+            </article>
+
+            <article class="job" id="vanaras-chamber">
+                <div class="job-header">
+                    <div>
+                        <h3>Vanara's Chamber</h3>
+                        <p><strong>Slide Studios</strong> · 2024–2025</p>
+                    </div>
+                    <a class="project-link" href="https://slidestudios.itch.io/vanaras-chamber" target="_blank" rel="noopener noreferrer">Ver proyecto ↗</a>
+                </div>
+
+                <p class="job-subtitle">Funciones en el proyecto:</p>
+                <ul class="accordion-list">
+                    <li>
+                        <button class="accordion-toggle" type="button" aria-expanded="false">
+                            Movimiento de estatuas
+                            <span class="arrow" aria-hidden="true">▾</span>
+                        </button>
+                        <div class="dropdown-content" hidden>
+                            <img src="Imagenes/gf.PNG" alt="Lógica de movimiento de estatuas 1">
+                            <img src="Imagenes/tre.PNG" alt="Lógica de movimiento de estatuas 2">
+                            <p>Las estatuas solo se mueven si no hay otra animación activa y el nivel no ha terminado.</p>
                         </div>
                     </li>
-                    <li>-Productor
-                        <span class="arrow">&#9660;</span>
-                        <div class="dropdown-content">
-                            <img src="Imagenes/producer.PNG" alt="Programación de los enemigos">
-                            <p>Este es el backlog  del proyecto.</p>
+                    <li>
+                        <button class="accordion-toggle" type="button" aria-expanded="false">
+                            Final del juego
+                            <span class="arrow" aria-hidden="true">▾</span>
+                        </button>
+                        <div class="dropdown-content" hidden>
+                            <img src="Imagenes/dg.PNG" alt="Secuencia final del juego">
+                        </div>
+                    </li>
+                    <li>
+                        <button class="accordion-toggle" type="button" aria-expanded="false">
+                            Productor
+                            <span class="arrow" aria-hidden="true">▾</span>
+                        </button>
+                        <div class="dropdown-content" hidden>
+                            <img src="Imagenes/producer.PNG" alt="Backlog de producción del proyecto">
+                            <p>Coordinación de entregas, backlog y seguimiento de tareas del equipo.</p>
                         </div>
                     </li>
                 </ul>
+
                 <div class="juego1">
-                    <a href="https://slidestudios.itch.io/vanaras-chamber" target="_blank">
-                        <img src="Imagenes/bN0GTN.png" alt="Vanara's Chamber">
-                    </a>
+                    <img src="Imagenes/bN0GTN.png" alt="Captura de Vanara's Chamber">
                 </div>
-            </div>
+            </article>
         </section>
-    </section>
+    </main>
 
     <footer>
-        <p>Find me on:</p>
-        <a href="https://itch.io/profile/rodrigovargom" target="_blank">
-            <img src="Imagenes/itchio-textless-black.svg" alt="Itch.io" class="footer-icon">
-        </a>
-        <a href="https://www.linkedin.com/in/rodrigo-vargas-gomez/" target="_blank">
-            <img src="Imagenes/LinkedIn_logo_initials.png.webp" alt="LinkedIn" class="footer-icon">
-        </a>
+        <p>© Rodrigo Vargas Gómez · Portfolio</p>
     </footer>
 </body>
 </html>

@@ -1,11 +1,14 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const listItems = document.querySelectorAll('.experience li');
+document.addEventListener('DOMContentLoaded', () => {
+    const toggles = document.querySelectorAll('.accordion-toggle');
 
-    listItems.forEach(item => {
-        item.addEventListener('click', function () {
-            const dropdown = this.querySelector('.dropdown-content');
-            if (dropdown) {
-                dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    toggles.forEach((toggle) => {
+        toggle.addEventListener('click', () => {
+            const content = toggle.nextElementSibling;
+            const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+
+            toggle.setAttribute('aria-expanded', String(!isExpanded));
+            if (content) {
+                content.hidden = isExpanded;
             }
         });
     });
