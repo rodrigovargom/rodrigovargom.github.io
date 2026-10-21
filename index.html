@@ -4,114 +4,846 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rodrigo Vargas Gómez | Portfolio</title>
-    <meta name="description" content="Portfolio profesional de Rodrigo Vargas Gómez, programador de videojuegos y productor.">
+    <title>Rodrigo Vargas Gómez | Gameplay & Systems Programmer Portfolio</title>
+    <meta name="description" content="Portfolio profesional de Rodrigo Vargas Gómez, Gameplay & Systems Programmer graduando en UDIT. Especializado en C#, C++, Unity, IA evolutiva, controladores PID (DDA) y computación gráfica en OpenGL.">
+    <meta name="keywords" content="Rodrigo Vargas Gomez, Gameplay Programmer, Video Game Developer, Unity, C#, C++, OpenGL, Game AI, Dynamic Difficulty Adjustment, UDIT, Madrid">
+    <meta name="author" content="Rodrigo Vargas Gómez">
+
+    <!-- Open Graph / Meta Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Rodrigo Vargas Gómez | Gameplay & Systems Programmer">
+    <meta property="og:description" content="Desarrollador de videojuegos especializado en gameplay programming, IA, teoría de control (PID/DDA) y gráficos 3D en C# y C++.">
+    <meta property="og:image" content="Imagenes/FOTO PERFIL.jpg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <header class="hero">
-        <div class="container hero-content">
-            <div class="hero-text">
-                <p class="eyebrow">Portfolio profesional</p>
-                <h1>Rodrigo Vargas Gómez</h1>
-                <p class="role">Programador de videojuegos</p>
-                <p class="contact">rodrigovargom@gmail.com · +34 722 782 847</p>
-                <div class="hero-links">
-                    <a href="https://www.linkedin.com/in/rodrigo-vargas-gomez/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                    <a href="https://itch.io/profile/rodrigovargom" target="_blank" rel="noopener noreferrer">Itch.io</a>
-                </div>
-            </div>
-            <div class="photo">
-                <img src="Imagenes/FOTO PERFIL.jpg" alt="Foto de Rodrigo Vargas Gómez">
-            </div>
+    <!-- Top Glowing Ambient Line -->
+    <div class="ambient-glow" aria-hidden="true"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="brand-logo" aria-label="Ir al inicio">
+                <span class="brand-bracket">&lt;</span>RVG<span class="brand-slash">/</span><span class="brand-bracket">&gt;</span>
+                <span class="brand-title">dev</span>
+            </a>
+
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#about" class="nav-link">Sobre mí</a>
+                <a href="#projects" class="nav-link">Proyectos</a>
+                <a href="#skills" class="nav-link">Habilidades</a>
+                <a href="#education" class="nav-link">Educación</a>
+                <a href="#contact" class="nav-link">Contacto</a>
+                <a href="Rodrigo_Vargas_CV.pdf" download="Rodrigo_Vargas_CV.pdf" class="nav-cta-btn">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    <span>CV en PDF</span>
+                </a>
+            </nav>
         </div>
     </header>
 
-    <main class="container main-grid">
-        <section class="card skills">
-            <h2>Competencias</h2>
-            <ul>
-                <li><strong>Lenguajes:</strong> C#, C++, JavaScript</li>
-                <li><strong>Motores:</strong> Unity, Construct, Unreal Engine</li>
-                <li><strong>Gestión:</strong> Project Management, comunicación de equipo</li>
-            </ul>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-layout">
+                <div class="hero-text-content">
+                    <div class="status-badge">
+                        <span class="status-pulse"></span>
+                        <span>Disponible para nuevas oportunidades · Madrid & Remoto</span>
+                    </div>
+
+                    <h1 class="hero-name">Rodrigo <span class="text-gradient">Vargas Gómez</span></h1>
+                    <p class="hero-tagline">Gameplay & Systems Programmer <span class="tagline-separator">|</span> Game AI & Graphics</p>
+
+                    <p class="hero-bio">
+                        Graduando en <strong>Diseño y Desarrollo de Videojuegos</strong> por la <strong>UDIT</strong>. Especializado en programación de gameplay técnico, arquitectura en <strong>C# y C++</strong>, algoritmos de ajuste dinámico de dificultad (<strong>PID / DDA</strong>), <strong>inteligencia artificial evolutiva</strong> y pipelines gráficos en <strong>OpenGL</strong>.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="Rodrigo_Vargas_CV.pdf" download="Rodrigo_Vargas_CV.pdf" class="btn btn-primary">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            <span>Descargar CV</span>
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <span>Ver Proyectos</span>
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        </a>
+                    </div>
+
+                    <div class="social-strip">
+                        <a href="https://github.com/rodrigovargom" target="_blank" rel="noopener noreferrer" class="social-pill" title="GitHub">
+                            <svg class="social-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/rodrigo-vargas-gomez/" target="_blank" rel="noopener noreferrer" class="social-pill" title="LinkedIn">
+                            <svg class="social-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://itch.io/profile/rodrigovargom" target="_blank" rel="noopener noreferrer" class="social-pill" title="Itch.io">
+                            <svg class="social-svg" viewBox="0 0 24 24" fill="currentColor"><path d="M2.38 3A2.38 2.38 0 0 0 0 5.38v.82c0 .76.35 1.45.92 1.89a2.38 2.38 0 0 0 3.34-.35L6.34 5.5l2.08 2.24a2.38 2.38 0 0 0 3.34.35 2.38 2.38 0 0 0 3.34-.35L17.18 5.5l2.08 2.24a2.38 2.38 0 0 0 3.34.35c.57-.44.92-1.13.92-1.89v-.82A2.38 2.38 0 0 0 21.14 3H2.38zm1.09 7.02c.06.63.26 1.25.64 1.78l1.41 1.94c.48.66.75 1.46.75 2.28V20a1 1 0 0 0 1 1h9.46a1 1 0 0 0 1-1v-3.98c0-.82.27-1.62.75-2.28l1.41-1.94c.38-.53.58-1.15.64-1.78H3.47zM8.5 13a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3zm6.5 0a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3z"/></svg>
+                            <span>Itch.io</span>
+                        </a>
+                        <a href="mailto:rodrigovargom@gmail.com" class="social-pill" title="Email directo">
+                            <svg class="social-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <span>rodrigovargom@gmail.com</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-avatar-wrapper">
+                    <div class="avatar-ring-outer"></div>
+                    <div class="avatar-ring-inner"></div>
+                    <div class="avatar-frame">
+                        <img src="Imagenes/FOTO PERFIL.jpg" alt="Foto de perfil de Rodrigo Vargas Gómez" class="hero-avatar">
+                    </div>
+                    <div class="floating-badge badge-unity">
+                        <span class="badge-dot"></span> Unity · C#
+                    </div>
+                    <div class="floating-badge badge-graphics">
+                        <span class="badge-dot"></span> C++ · OpenGL
+                    </div>
+                </div>
+            </div>
+
+            <!-- Metric Cards Strip -->
+            <div class="container hero-metrics">
+                <div class="metric-card">
+                    <span class="metric-number">3+</span>
+                    <span class="metric-label">Años en Unity & C#</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">UDIT</span>
+                    <span class="metric-label">Grado en Videojuegos</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">6+</span>
+                    <span class="metric-label">Proyectos Técnicos</span>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-number">B2</span>
+                    <span class="metric-label">Inglés Certificado (Trinity)</span>
+                </div>
+            </div>
         </section>
 
-        <section class="card experience">
-            <h2>Proyectos destacados</h2>
+        <!-- About & Philosophy Section -->
+        <section class="section-container" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Trayectoria & Enfoque</span>
+                    <h2 class="section-title">Perfil Técnico</h2>
+                    <p class="section-description">
+                        Combino una sólida formación matemática e informática con pasión por la jugabilidad receptiva, las mecánicas emergentes y la arquitectura de software escalable.
+                    </p>
+                </div>
 
-            <article class="job" id="metal-y-plomo">
-                <div class="job-header">
-                    <div>
-                        <h3>Metal y Plomo</h3>
-                        <p><strong>Llama Larga</strong> · 2022–2023</p>
+                <div class="about-grid">
+                    <div class="about-card highlight">
+                        <div class="about-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        </div>
+                        <h3>Arquitectura & Sistemas</h3>
+                        <p>
+                            Desarrollo gameplay estructurado sobre patrones de diseño desacoplados (ScriptableObjects, arquitectura orientada a eventos, FSM modulares y componentes orientados a datos) garantizando código limpio, mantenible y testeable.
+                        </p>
                     </div>
-                    <a class="project-link" href="https://llama-larga.itch.io/metal-y-plomo" target="_blank" rel="noopener noreferrer">Ver proyecto ↗</a>
-                </div>
-                <p class="job-subtitle">Funciones en el proyecto:</p>
-                <ul>
-                    <li>Programación de enemigos</li>
-                    <li>Sistema de movimiento</li>
-                    <li>Implementación de animaciones</li>
-                </ul>
-                <div class="juego1">
-                    <img src="Imagenes/+1erhd.jpg" alt="Captura de Metal y Plomo">
-                </div>
-            </article>
 
-            <article class="job" id="vanaras-chamber">
-                <div class="job-header">
-                    <div>
-                        <h3>Vanara's Chamber</h3>
-                        <p><strong>Slide Studios</strong> · 2024–2025</p>
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+                        </div>
+                        <h3>IA & Control Dinámico (DDA)</h3>
+                        <p>
+                            Investigo e implemento sistemas adaptativos como controladores PID para regulación continua de dificultad en tiempo real y algoritmos genéticos evolutivos para optimización de comportamiento táctico y parámetros de combate.
+                        </p>
                     </div>
-                    <a class="project-link" href="https://slidestudios.itch.io/vanaras-chamber" target="_blank" rel="noopener noreferrer">Ver proyecto ↗</a>
+
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                        </div>
+                        <h3>Gráficos & Low-Level C++</h3>
+                        <p>
+                            Experiencia práctica con pipelines de renderizado en OpenGL moderno 3.3+ y WebGL: programación de shaders en GLSL, cálculo de matrices MVP con GLM, iluminación Phong multi-fuente y mallas procedimentales.
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <h3>Producción Ágil & Equipo</h3>
+                        <p>
+                            Experiencia multidisciplinar en equipos de hasta 5 desarrolladores como Gameplay Programmer y Productor/Project Manager: gestión de backlog, planificación de hitos, sprints y control de versiones con Git/GitHub.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section class="section-container" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Portfolio de Desarrollo</span>
+                    <h2 class="section-title">Proyectos Destacados</h2>
+                    <p class="section-description">
+                        Selección de proyectos de gameplay, sistemas de control inteligente, algoritmos evolutivos, gráficos por computador y juegos comerciales.
+                    </p>
                 </div>
 
-                <p class="job-subtitle">Funciones en el proyecto:</p>
-                <ul class="accordion-list">
-                    <li>
-                        <button class="accordion-toggle" type="button" aria-expanded="false">
-                            Movimiento de estatuas
-                            <span class="arrow" aria-hidden="true">▾</span>
-                        </button>
-                        <div class="dropdown-content" hidden>
-                            <img src="Imagenes/gf.PNG" alt="Lógica de movimiento de estatuas 1">
-                            <img src="Imagenes/tre.PNG" alt="Lógica de movimiento de estatuas 2">
-                            <p>Las estatuas solo se mueven si no hay otra animación activa y el nivel no ha terminado.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <button class="accordion-toggle" type="button" aria-expanded="false">
-                            Final del juego
-                            <span class="arrow" aria-hidden="true">▾</span>
-                        </button>
-                        <div class="dropdown-content" hidden>
-                            <img src="Imagenes/dg.PNG" alt="Secuencia final del juego">
-                        </div>
-                    </li>
-                    <li>
-                        <button class="accordion-toggle" type="button" aria-expanded="false">
-                            Productor
-                            <span class="arrow" aria-hidden="true">▾</span>
-                        </button>
-                        <div class="dropdown-content" hidden>
-                            <img src="Imagenes/producer.PNG" alt="Backlog de producción del proyecto">
-                            <p>Coordinación de entregas, backlog y seguimiento de tareas del equipo.</p>
-                        </div>
-                    </li>
-                </ul>
-
-                <div class="juego1">
-                    <img src="Imagenes/bN0GTN.png" alt="Captura de Vanara's Chamber">
+                <!-- Category Filters -->
+                <div class="project-filters" role="tablist" aria-label="Filtro de proyectos">
+                    <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Todos (6)</button>
+                    <button class="filter-btn" data-filter="gameplay" role="tab" aria-selected="false">Gameplay & Unity</button>
+                    <button class="filter-btn" data-filter="ai" role="tab" aria-selected="false">IA & Control</button>
+                    <button class="filter-btn" data-filter="graphics" role="tab" aria-selected="false">Gráficos & C++</button>
+                    <button class="filter-btn" data-filter="production" role="tab" aria-selected="false">Producción</button>
                 </div>
-            </article>
+
+                <div class="projects-grid">
+                    <!-- Project 1: Platformer-DDA -->
+                    <article class="project-card featured" data-category="gameplay ai">
+                        <div class="project-header">
+                            <div class="badge-group">
+                                <span class="tag tag-primary">Investigación & Gameplay</span>
+                                <span class="tag tag-ai">Teoría de Control (PID)</span>
+                            </div>
+                            <span class="project-year">2024</span>
+                        </div>
+
+                        <div class="project-content">
+                            <h3 class="project-title">Platformer-DDA: Ajuste Dinámico de Dificultad</h3>
+                            <p class="project-role-badge">Arquitectura de Sistemas, Control PID & Telemetría · Unity (C#)</p>
+                            
+                            <p class="project-summary">
+                                Entorno experimental de plataformas 2D implementado en Unity con un sistema desacoplado de <strong>Dynamic Difficulty Adjustment (DDA)</strong>. Modula en tiempo real la experiencia del usuario sin saltos abruptos basándose en modelos heurísticos del jugador y retroalimentación cibernética.
+                            </p>
+
+                            <ul class="project-features">
+                                <li>
+                                    <strong>Controlador PID en bucle cerrado:</strong> Regula dinámicamente factores de dificultad (velocidad de proyectiles, frecuencia de spawners y cadencia de fuego) minimizando el error entre la tasa de éxito objetivo y el desempeño real.
+                                </li>
+                                <li>
+                                    <strong>Evaluador Heurístico & Métricas:</strong> Detección probabilística de zonas de muerte críticas (DeathZoneTracker), cálculo de velocidad de avance y fatiga del jugador.
+                                </li>
+                                <li>
+                                    <strong>Módulo de Telemetría & Logging:</strong> Sistema de exportación a CSV para análisis estadístico de sesiones de prueba y validación de hipótesis de experiencia de usuario.
+                                </li>
+                                <li>
+                                    <strong>Debug Overlay in-engine:</strong> Panel interactivo para monitorización en vivo del setpoint, valor actual, variables proporcionales/integrales/derivativas y estado de dificultad.
+                                </li>
+                            </ul>
+
+                            <div class="tech-stack-pills">
+                                <span class="tech-pill">Unity 2D</span>
+                                <span class="tech-pill">C#</span>
+                                <span class="tech-pill">PID Controller</span>
+                                <span class="tech-pill">DDA Algorithms</span>
+                                <span class="tech-pill">CSV Telemetry</span>
+                                <span class="tech-pill">ScriptableObjects</span>
+                            </div>
+                        </div>
+
+                        <div class="project-footer">
+                            <a href="https://github.com/rodrigovargom/Platformer-DDA" target="_blank" rel="noopener noreferrer" class="btn btn-card-action">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                <span>Ver Código en GitHub</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: AI Genetic Algorithm -->
+                    <article class="project-card featured" data-category="ai gameplay">
+                        <div class="project-header">
+                            <div class="badge-group">
+                                <span class="tag tag-ai">Inteligencia Artificial</span>
+                                <span class="tag tag-primary">Computación Evolutiva</span>
+                            </div>
+                            <span class="project-year">2024</span>
+                        </div>
+
+                        <div class="project-content">
+                            <h3 class="project-title">AI Genetic Algorithm & ExpectMinimax</h3>
+                            <p class="project-role-badge">Arquitectura de IA, Algoritmos Genéticos & Toma de Decisiones · Unity (C#)</p>
+                            
+                            <p class="project-summary">
+                                Banco de pruebas de combate 1 contra 1 en Unity con agentes autónomos entrenados mediante <strong>algoritmos genéticos</strong> y árboles de decisión <strong>ExpectMinimax</strong> para optimizar estrategias bajo incertidumbre probabilística.
+                            </p>
+
+                            <ul class="project-features">
+                                <li>
+                                    <strong>Pipeline Evolutivo Completo:</strong> Codificación de genomas, selección proporcional por fitness, cruce genético y operadores de mutación aleatoria para evolucionar configuraciones óptimas de dispersión de armas (ShotgunConfiguration) y tácticas de combate.
+                                </li>
+                                <li>
+                                    <strong>ExpectMinimax Implementation:</strong> Evaluación de estados de juego con tiradas probabilísticas de dados (Dice Logic) simulando decisiones óptimas en turnos inciertos.
+                                </li>
+                                <li>
+                                    <strong>Arquitectura Desacoplada:</strong> Gestión de estados a través de ScriptableObjects y sistema reactivo de eventos (GameEventListener, AttackEventListener).
+                                </li>
+                            </ul>
+
+                            <div class="tech-stack-pills">
+                                <span class="tech-pill">C#</span>
+                                <span class="tech-pill">Unity</span>
+                                <span class="tech-pill">Genetic Algorithms</span>
+                                <span class="tech-pill">ExpectMinimax</span>
+                                <span class="tech-pill">Event-Driven Architecture</span>
+                            </div>
+                        </div>
+
+                        <div class="project-footer">
+                            <a href="https://github.com/rodrigovargom/AI_GeneticAlgorithm" target="_blank" rel="noopener noreferrer" class="btn btn-card-action">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                                <span>Ver Código en GitHub</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Vanara's Chamber -->
+                    <article class="project-card" data-category="gameplay production">
+                        <div class="project-header">
+                            <div class="badge-group">
+                                <span class="tag tag-primary">3D Escape Room</span>
+                                <span class="tag tag-prod">Slide Studios · 5 Miembros</span>
+                            </div>
+                            <span class="project-year">2024–2025</span>
+                        </div>
+
+                        <div class="project-media">
+                            <img src="Imagenes/bN0GTN.png" alt="Captura de Vanara's Chamber" loading="lazy" class="project-img lightbox-trigger" data-title="Vanara's Chamber - 3D Escape Room" data-caption="Entorno principal del templo y acertijos espaciales en 3D.">
+                        </div>
+
+                        <div class="project-content">
+                            <h3 class="project-title">Vanara's Chamber</h3>
+                            <p class="project-role-badge">Gameplay Programmer & Lead Producer · Unity 3D</p>
+                            
+                            <p class="project-summary">
+                                Aventura de rompecabezas en primera y tercera persona en entorno 3D. Lideré la sincronización de gameplay interactivo y la coordinación ágil del equipo de desarrollo.
+                            </p>
+
+                            <ul class="project-features">
+                                <li>
+                                    <strong>Lógica de Mecánica de Estatuas:</strong> Máquina de estados que restringe el movimiento y rotación de estatuas según la fase de animación activa y condiciones de finalización de sala, garantizando determinismo.
+                                </li>
+                                <li>
+                                    <strong>Secuencia Cinemática & Fin de Juego:</strong> Control de flujo del nivel, eventos de victoria, transiciones de cámara y retroalimentación audiovisual.
+                                </li>
+                                <li>
+                                    <strong>Producción & Gestión de Proyecto:</strong> Organización del backlog de tareas, coordinación de sprints, asignación técnica y seguimiento de hitos de entrega para 5 desarrolladores.
+                                </li>
+                            </ul>
+
+                            <!-- Interactive Technical Deep Dive Accordion -->
+                            <div class="accordion-item">
+                                <button class="accordion-toggle" type="button" aria-expanded="false">
+                                    <span>Inspeccionar Arquitectura Técnica & Backlog</span>
+                                    <span class="arrow-icon">▾</span>
+                                </button>
+                                <div class="accordion-panel" hidden>
+                                    <div class="blueprint-gallery">
+                                        <div class="blueprint-card">
+                                            <p class="blueprint-label">Lógica de Estados de Movimiento</p>
+                                            <img src="Imagenes/gf.PNG" alt="Lógica de movimiento de estatuas 1" class="lightbox-trigger" data-title="FSM de Movimiento de Estatuas" data-caption="Control de flags para impedir desplazamientos concurrentes durante animaciones activas.">
+                                        </div>
+                                        <div class="blueprint-card">
+                                            <p class="blueprint-label">Validación y Restricciones</p>
+                                            <img src="Imagenes/tre.PNG" alt="Lógica de movimiento de estatuas 2" class="lightbox-trigger" data-title="Validación de Fin de Nivel" data-caption="Condicionales que aseguran que las estatuas se bloqueen al resolver el rompecabezas.">
+                                        </div>
+                                        <div class="blueprint-card">
+                                            <p class="blueprint-label">Secuencia de Victoria</p>
+                                            <img src="Imagenes/dg.PNG" alt="Secuencia de fin de juego" class="lightbox-trigger" data-title="Flujo de Fin de Juego" data-caption="Activación de secuencia cinemática y disparadores de conclusión de partida.">
+                                        </div>
+                                        <div class="blueprint-card">
+                                            <p class="blueprint-label">Panel de Producción & Tareas</p>
+                                            <img src="Imagenes/producer.PNG" alt="Panel de producción y backlog" class="lightbox-trigger" data-title="Backlog de Producción" data-caption="Seguimiento ágil de entregas, tareas de programación y assets artísticos.">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="tech-stack-pills">
+                                <span class="tech-pill">Unity 3D</span>
+                                <span class="tech-pill">C#</span>
+                                <span class="tech-pill">FSM / State Machine</span>
+                                <span class="tech-pill">Agile / Scrum</span>
+                                <span class="tech-pill">Git</span>
+                            </div>
+                        </div>
+
+                        <div class="project-footer">
+                            <a href="https://slidestudios.itch.io/vanaras-chamber" target="_blank" rel="noopener noreferrer" class="btn btn-card-action">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                <span>Jugar en Itch.io</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Metal y Plomo -->
+                    <article class="project-card" data-category="gameplay">
+                        <div class="project-header">
+                            <div class="badge-group">
+                                <span class="tag tag-primary">2D Action Shooter</span>
+                                <span class="tag tag-prod">Llama Larga · 5 Miembros</span>
+                            </div>
+                            <span class="project-year">2022–2023</span>
+                        </div>
+
+                        <div class="project-media">
+                            <img src="Imagenes/+1erhd.jpg" alt="Captura del juego Metal y Plomo" loading="lazy" class="project-img lightbox-trigger" data-title="Metal y Plomo - 2D Shooter" data-caption="Shooter 2D frenético desarrollado en equipo para game jams y presentación universitaria.">
+                        </div>
+
+                        <div class="project-content">
+                            <h3 class="project-title">Metal y Plomo</h3>
+                            <p class="project-role-badge">Gameplay & Enemy AI Programmer · Unity 2D</p>
+                            
+                            <p class="project-summary">
+                                Shooter de acción en dos dimensiones con combates vertiginosos. Responsable íntegro de la física de movimiento del protagonista, patrones de hostilidad enemiga y la integración de animaciones reactivas.
+                            </p>
+
+                            <ul class="project-features">
+                                <li>
+                                    <strong>Inteligencia Artificial de Enemigos:</strong> Implementación de estados de persecución, rango de visión, patrulla y disparo coordinado contra el jugador.
+                                </li>
+                                <li>
+                                    <strong>Control de Movimiento Fluido:</strong> Ajuste preciso de aceleraciones, inercias y colisiones 2D para una respuesta instantánea y gratificante.
+                                </li>
+                                <li>
+                                    <strong>Animation Controller:</strong> Mezcla de árboles de animación (animator blend trees) vinculados al estado de velocidad, retroceso de disparo y daño recibido.
+                                </li>
+                            </ul>
+
+                            <div class="tech-stack-pills">
+                                <span class="tech-pill">Unity 2D</span>
+                                <span class="tech-pill">C#</span>
+                                <span class="tech-pill">2D Physics</span>
+                                <span class="tech-pill">Enemy AI</span>
+                                <span class="tech-pill">Animation Blending</span>
+                            </div>
+                        </div>
+
+                        <div class="project-footer">
+                            <a href="https://llama-larga.itch.io/metal-y-plomo" target="_blank" rel="noopener noreferrer" class="btn btn-card-action">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                <span>Jugar en Itch.io</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: OpenGL & Graphics Pipeline -->
+                    <article class="project-card" data-category="graphics">
+                        <div class="project-header">
+                            <div class="badge-group">
+                                <span class="tag tag-graphics">Computación Gráfica</span>
+                                <span class="tag tag-primary">C++ & GLSL</span>
+                            </div>
+                            <span class="project-year">2024–2025</span>
+                        </div>
+
+                        <div class="project-content">
+                            <h3 class="project-title">Motor de Renderizado & Shaders en OpenGL</h3>
+                            <p class="project-role-badge">Graphics Programming & Linear Algebra · C++, OpenGL 3.3+, WebGL</p>
+                            
+                            <p class="project-summary">
+                                Suite integral de gráficos por computador desarrollada en C++ nativo y WebGL. Explora desde la inicialización de contextos gráficos hasta pipelines de shaders programables y modelos de iluminación avanzados.
+                            </p>
+
+                            <ul class="project-features">
+                                <li>
+                                    <strong>Pipeline Programable GLSL:</strong> Shaders de vértices y fragmentos propios, uniforms de matrices (Model, View, Projection) y gestión de buffers (VAO, VBO, EBO).
+                                </li>
+                                <li>
+                                    <strong>Modelos de Iluminación Phong:</strong> Implementación de componentes ambiental, difusa y especular con soporte para múltiples luces simultáneas (direccionales y puntuales).
+                                </li>
+                                <li>
+                                    <strong>Geometría Procedimental & Terrenos:</strong> Generación matemática en tiempo de ejecución de esferas polares, grillas de terreno con mapas de altura y órbitas astronómicas.
+                                </li>
+                                <li>
+                                    <strong>Cámara Orbital & Mapeo de Texturas:</strong> Integración de GLM para álgebra matricial 3D, carga de texturas, transparencias con blending y culling de caras traseras.
+                                </li>
+                            </ul>
+
+                            <div class="tech-stack-pills">
+                                <span class="tech-pill">C++</span>
+                                <span class="tech-pill">Modern OpenGL</span>
+                                <span class="tech-pill">GLSL Shaders</span>
+                                <span class="tech-pill">GLM Math</span>
+                                <span class="tech-pill">WebGL</span>
+                                <span class="tech-pill">CMake</span>
+                            </div>
+                        </div>
+
+                        <div class="project-footer">
+                            <span class="project-status-note">
+                                <svg class="inline-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Proyectos C++ y WebGL ejecutables en local
+                            </span>
+                        </div>
+                    </article>
+
+                    <!-- Project 6: Soldier Jump -->
+                    <article class="project-card" data-category="gameplay">
+                        <div class="project-header">
+                            <div class="badge-group">
+                                <span class="tag tag-primary">Solo Development</span>
+                                <span class="tag tag-ai">2D Shooter Arcade</span>
+                            </div>
+                            <span class="project-year">2024</span>
+                        </div>
+
+                        <div class="project-content">
+                            <h3 class="project-title">Soldier Jump</h3>
+                            <p class="project-role-badge">Desarrollo Integral en Solitario · Unity (C#)</p>
+                            
+                            <p class="project-summary">
+                                Shooter de plataformas 2D con loop arcade diseñado y programado íntegramente en solitario, cubriendo arquitectura de mecánicas, diseño de niveles y ciclo completo de publicación.
+                            </p>
+
+                            <ul class="project-features">
+                                <li>
+                                    <strong>Diseño e Implementación de Mecánicas:</strong> Sistema de salto balístico, apuntado omnidireccional y control de retroceso.
+                                </li>
+                                <li>
+                                    <strong>Loop de Juego & Gestión de Puntuación:</strong> Arquitectura de ciclo de vida con GameManagers desacoplados y estados de reaparición.
+                                </li>
+                            </ul>
+
+                            <div class="tech-stack-pills">
+                                <span class="tech-pill">Unity</span>
+                                <span class="tech-pill">C#</span>
+                                <span class="tech-pill">Solo Developer</span>
+                                <span class="tech-pill">Gameplay Mechanics</span>
+                            </div>
+                        </div>
+
+                        <div class="project-footer">
+                            <a href="https://itch.io/profile/rodrigovargom" target="_blank" rel="noopener noreferrer" class="btn btn-card-action">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                                <span>Ver en Itch.io</span>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section class="section-container" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Conocimientos & Tecnologías</span>
+                    <h2 class="section-title">Habilidades Técnicas</h2>
+                    <p class="section-description">
+                        Matriz de competencias organizadas por área técnica, lenguajes de programación, herramientas de desarrollo y metodologías.
+                    </p>
+                </div>
+
+                <div class="skills-matrix-grid">
+                    <!-- Category 1 -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <span class="skill-cat-icon">💻</span>
+                            <h3>Lenguajes de Programación</h3>
+                        </div>
+                        <ul class="skill-items-list">
+                            <li>
+                                <div class="skill-item-info">
+                                    <span class="skill-item-name">C#</span>
+                                    <span class="skill-item-level">Avanzado · 3+ años</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 95%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-item-info">
+                                    <span class="skill-item-name">C++</span>
+                                    <span class="skill-item-level">Gráficos, memoria & sistemas</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-item-info">
+                                    <span class="skill-item-name">GLSL / Shaders</span>
+                                    <span class="skill-item-level">Vértices, fragmentos, uniforms</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 75%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-item-info">
+                                    <span class="skill-item-name">JavaScript & WebGL</span>
+                                    <span class="skill-item-level">Renderizado interactivo</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 70%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-item-info">
+                                    <span class="skill-item-name">HTML5 & CSS3</span>
+                                    <span class="skill-item-level">Interfaces web semánticas</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 2 -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <span class="skill-cat-icon">🎮</span>
+                            <h3>Motores & APIs Gráficas</h3>
+                        </div>
+                        <ul class="skill-items-list">
+                            <li>
+                                <div class="skill-item-info">
+                                    <span class="skill-item-name">Unity (2D & 3D)</span>
+                                    <span class="skill-item-level">Principal · 3 años</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 95%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-item-info">
+                                    <span class="skill-item-name">Modern OpenGL 3.3+</span>
+                                    <span class="skill-item-level">Pipelines, VAO/VBO, Phong</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-item-info">
+                                    <span class="skill-item-name">Unreal Engine</span>
+                                    <span class="skill-item-level">Fundamentos & Blueprints</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 65%;"></div></div>
+                            </li>
+                            <li>
+                                <div class="skill-item-info">
+                                    <span class="skill-item-name">Construct 3</span>
+                                    <span class="skill-item-level">Prototipado rápido · 1 año</span>
+                                </div>
+                                <div class="skill-bar"><div class="skill-fill" style="width: 75%;"></div></div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 3 -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <span class="skill-cat-icon">🧠</span>
+                            <h3>IA, Control & Sistemas</h3>
+                        </div>
+                        <div class="skill-tags-cloud">
+                            <span class="tech-badge">Máquinas de Estados (FSM)</span>
+                            <span class="tech-badge">Controladores PID (DDA)</span>
+                            <span class="tech-badge">Algoritmos Genéticos</span>
+                            <span class="tech-badge">ExpectMinimax</span>
+                            <span class="tech-badge">Event-Driven Architecture</span>
+                            <span class="tech-badge">ScriptableObjects</span>
+                            <span class="tech-badge">Telemetría & Logging CSV</span>
+                            <span class="tech-badge">Físicas de Movimiento 2D/3D</span>
+                            <span class="tech-badge">Álgebra Lineal & Matrices MVP</span>
+                        </div>
+                    </div>
+
+                    <!-- Category 4 -->
+                    <div class="skill-category-card">
+                        <div class="skill-category-header">
+                            <span class="skill-cat-icon">🛠️</span>
+                            <h3>Herramientas, Producción & Idiomas</h3>
+                        </div>
+                        <div class="skill-tags-cloud">
+                            <span class="tech-badge">Git & GitHub</span>
+                            <span class="tech-badge">Visual Studio & VS Code</span>
+                            <span class="tech-badge">CMake</span>
+                            <span class="tech-badge">Scrum & Metodologías Ágiles</span>
+                            <span class="tech-badge">Jira / Trello Backlog</span>
+                            <span class="tech-badge">Producción de Equipos</span>
+                            <span class="tech-badge highlight-badge">Español (Nativo)</span>
+                            <span class="tech-badge highlight-badge">Inglés (B2 ISE II Trinity)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education & Background Section -->
+        <section class="section-container" id="education">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">Formación Académica</span>
+                    <h2 class="section-title">Educación & Trayectoria</h2>
+                    <p class="section-description">
+                        Base universitaria en ciencias de la computación aplicadas a videojuegos, complementada con formación musical de alta exigencia.
+                    </p>
+                </div>
+
+                <div class="timeline">
+                    <!-- Item 1: Degree -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-period">2022 — 2026 (En curso)</div>
+                            <h3 class="timeline-title">Grado en Diseño y Desarrollo de Videojuegos y Entornos Virtuales</h3>
+                            <h4 class="timeline-institution">UDIT — Universidad de Diseño, Innovación y Tecnología (Madrid)</h4>
+                            <p class="timeline-details">
+                                Especialización en programación de videojuegos: arquitectura de software, inteligencia artificial, matemáticas para gráficos 3D, física computacional, producción y desarrollo en equipo con Unity, Unreal Engine y C++.
+                            </p>
+                            <div class="timeline-tags">
+                                <span>Programación Avanzada</span>
+                                <span>IA de Videojuegos</span>
+                                <span>Física & Gráficos</span>
+                                <span>Producción</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Bachillerato -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-period">2020 — 2022</div>
+                            <h3 class="timeline-title">Bachillerato Científico-Tecnológico</h3>
+                            <h4 class="timeline-institution">IES Juan Bosco</h4>
+                            <p class="timeline-details">
+                                Base rigurosa en matemáticas, física, dibujo técnico y fundamentos tecnológicos preparatorios para la ingeniería de software.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Conservatorio -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-period">3 Años de Formación</div>
+                            <h3 class="timeline-title">Estudios Musicales en Conservatorio (Especialidad Contrabajo)</h3>
+                            <h4 class="timeline-institution">Conservatorio Profesional de Música</h4>
+                            <p class="timeline-details">
+                                Tres años de práctica orquestal y técnica instrumental que aportan un alto sentido de disciplina, constancia metódica, atención a la armonía estructural y trabajo en sincronía grupal.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Events -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-card">
+                            <div class="timeline-period">Eventos & Participaciones</div>
+                            <h3 class="timeline-title">Presencia en Eventos de la Industria</h3>
+                            <ul class="timeline-bullets">
+                                <li><strong>Design Day UDIT (2022):</strong> Participante en jornadas de innovación interactiva y diseño técnico.</li>
+                                <li><strong>Madrid Games Week (2018):</strong> Asistente a ponencias de la industria del videojuego en España.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section-container" id="contact">
+            <div class="container">
+                <div class="contact-box">
+                    <div class="contact-header">
+                        <span class="section-eyebrow">¿Tienes un proyecto o vacante?</span>
+                        <h2 class="contact-title">¡Hablemos y creemos algo extraordinario!</h2>
+                        <p class="contact-subtitle">
+                            Actualmente abierto a puestos de <strong>Gameplay Programmer</strong>, <strong>Junior Engine / Systems Programmer</strong> o <strong>Game Developer</strong> tanto presencial en Madrid como en remoto o con posibilidad de reubicación.
+                        </p>
+                    </div>
+
+                    <div class="contact-cards-grid">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">Correo Electrónico</span>
+                                <span class="contact-value" id="emailValue">rodrigovargom@gmail.com</span>
+                            </div>
+                            <button class="btn-copy" id="btnCopyEmail" title="Copiar correo al portapapeles">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                <span id="copyText">Copiar</span>
+                            </button>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">Teléfono / WhatsApp</span>
+                                <a href="tel:+34722782847" class="contact-value link">+34 722 782 847</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">Perfil Profesional</span>
+                                <a href="https://www.linkedin.com/in/rodrigo-vargas-gomez/" target="_blank" rel="noopener noreferrer" class="contact-value link">linkedin.com/in/rodrigo-vargas-gomez ↗</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            </div>
+                            <div class="contact-info">
+                                <span class="contact-label">Currículum Vitae</span>
+                                <a href="Rodrigo_Vargas_CV.pdf" download="Rodrigo_Vargas_CV.pdf" class="contact-value link">Descargar PDF Directo ↗</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p>© Rodrigo Vargas Gómez · Portfolio</p>
+    <!-- Interactive Lightbox Modal -->
+    <div class="lightbox-modal" id="lightboxModal" aria-hidden="true" role="dialog">
+        <div class="lightbox-overlay" id="lightboxOverlay"></div>
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar vista detallada">&times;</button>
+            <div class="lightbox-image-container">
+                <img src="" alt="" id="lightboxImg">
+            </div>
+            <div class="lightbox-caption">
+                <h4 id="lightboxTitle"></h4>
+                <p id="lightboxDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-left">
+                <div class="brand-logo">
+                    <span class="brand-bracket">&lt;</span>RVG<span class="brand-slash">/</span><span class="brand-bracket">&gt;</span>
+                </div>
+                <p class="footer-credit">© 2026 Rodrigo Vargas Gómez · Gameplay & Systems Programmer</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#hero">Inicio</a>
+                <a href="#about">Sobre mí</a>
+                <a href="#projects">Proyectos</a>
+                <a href="#skills">Habilidades</a>
+                <a href="#education">Educación</a>
+                <a href="Rodrigo_Vargas_CV.pdf" download="Rodrigo_Vargas_CV.pdf">Descargar CV</a>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
